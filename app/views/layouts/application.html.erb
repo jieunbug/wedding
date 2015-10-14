@@ -8,10 +8,19 @@
 </head>
 <body>
 
-<%= link_to 'Home', root_path %> | <%= link_to 'Schedule', schedules_path %> | <%= link_to 'Travel', travels_path %> | <%= link_to 'Lodging', lodgings_path %> | <%= link_to 'Excursions', excursions_path %> | <%= link_to 'Registry', registries_path %>
+<div class="container">
+	<ul class="nav nav-tabs">
+		<li> <%= link_to 'Home', root_path %></li> 
+		<li> <%= link_to 'Schedule', schedules_path %></li> 
+		<li> <%= link_to 'Travel', travels_path %></li> 
+		<li> <%= link_to 'Lodging', lodgings_path %></li> 
+		<li> <%= link_to 'Excursions', excursions_path %></li> 
+		<li> <%= link_to 'Registry', registries_path %></li> 
+	</ul>
 
+	<%= yield %>
 
-<%= yield %>
+</div>
 
 </body>
 </html>
