@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Wedding01</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>A&J: 9.4.16</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -13,8 +13,8 @@
 		<li> <%= link_to 'Home', root_path %></li> 
 		<li> <%= link_to 'Schedule', schedules_path %></li> 
 		<li> <%= link_to 'Travel', travels_path %></li> 
-		<li> <%= link_to 'Lodging', lodgings_path %></li> 
-		<li> <%= link_to 'Excursions', excursions_path %></li> 
+		<li class="hidden-sm hidden-xs"> <%= link_to 'Lodging', lodgings_path %></li> 
+		<li class="hidden-sm hidden-xs"> <%= link_to 'Excursions', excursions_path %></li> 
 		<li> <%= link_to 'Registry', registries_path %></li> 
 	</ul>
 

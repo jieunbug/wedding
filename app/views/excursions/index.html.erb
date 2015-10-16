@@ -1,3 +1,121 @@
+<%# Pre-style the boxes where the maps will live %> 
+	<style>
+		#map {
+			width: 500px;
+			height: 400px;
+			background-color: #CCC;
+		}
+	</style>
+
+<%# Load the Google Maps API %> 
+	<script src="https://maps.googleapis.com/maps/api/js">
+	</script>
+
+<%# Actual content starts here %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-md-5">
+			<p class="text-muted">food favorites<br>
+			<i>all 4+ stars on Yelp with 500+ reviews</i></p>
+				<h4> <%= link_to "Roscoe's Chicken and Waffles", "http://www.yelp.com/biz/roscoes-house-of-chicken-and-waffles-los-angeles" %> </h4>
+				<h4> <%= link_to 'Chosun Galbee', 'http://www.yelp.com/biz/chosun-galbee-los-angeles' %> </h4>
+				<h4> <%= link_to 'Sushi Gen', 'http://www.yelp.com/biz/sushi-gen-los-angeles' %> </h4>
+				<h4> <%= link_to 'Sugarfish Santa Monica', 'http://www.yelp.com/biz/sugarfish-by-sushi-nozawa-santa-monica' %> </h4>
+				<h4> <%= link_to "Joan's on 3rd", 'http://www.yelp.com/biz/joans-on-third-los-angeles' %> </h4>
+				<h4> <%= link_to 'Lucques', 'http://www.yelp.com/biz/lucques-west-hollywood-2' %> </h4>
+				<h4> <%= link_to 'AOC', 'http://www.yelp.com/biz/aoc-los-angeles' %> </h4>
+				<h4> <%= link_to 'Larchmont Wine & Cheese', 'http://www.yelp.com/biz/larchmont-village-wine-spirits-and-cheese-los-angeles' %> </h4>
+				<h4> <%= link_to 'Noshi Sushi', 'http://www.yelp.com/biz/noshi-sushi-los-angeles' %> </h4>
+		</div>
+
+
+		<div class="col-xs-12 col-md-7 hidden-sm hidden-xs">
+			<%# Physically create the box where the map will live %> 
+			<div id="map">
+			</div>
+
+			<%# polish people are smarter %>
+			<script type="text/javascript">
+		        var foodSpots = [
+					["Roscoe's Chicken and Waffles",34.047516,-118.346233,1],
+					["Chosun Galbee",34.052378,-118.310442,2],
+					["Sushi Gen",34.047238,-118.238668,3],
+					["Sugarfish",34.05351,-118.463093,4],
+					["Joan's on 3rd",34.072699,-118.371809,5],
+					["Lucques",34.082333,-118.375404,6],
+					["AOC",34.073397,-118.381919,7],
+					["Larchmont Wine & Cheese",34.075315,-118.32395,8],
+					["Noshi Sushi",34.076032,-118.305355,9]
+		        ];
+
+		        var foodMap = new google.maps.Map(document.getElementById('map'), {
+		          zoom: 11,
+		          center: new google.maps.LatLng(34.047516, -118.346233),
+		          mapTypeId: google.maps.MapTypeId.ROADMAP
+		        });
+
+		        var infowindow = new google.maps.InfoWindow();
+
+		        var marker, i;
+
+		        for (i = 0; i < foodSpots.length; i++) {
+		          marker = new google.maps.Marker({
+		            position: new google.maps.LatLng(foodSpots[i][1], foodSpots[i][2]),
+		            map: foodMap,
+		            title: foodSpots[i][0]
+		          });
+
+		          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+		            return function() {
+		              infowindow.setContent(foodSpots[i][0]);
+		              infowindow.open(foodMap, marker);
+		            }
+		          })(marker, i));
+		        }
+			</script>
+		</div>
+
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-xs-12 col-md-7">
+			<p class="text-muted">outside</p>
+			<p class="text-muted">> hiking & running</p>
+						<h4> Franklin Canyon </h4>
+						<h4> Runyon Canyon </h4>
+						<h4> Canyon Canyon </h4>
+			<p class="text-muted">> beaches</p>
+						<h4> Will Rogers / Temescal Canyon </h4>
+						<h4> Malibu </h4>
+			<p class="text-muted">> golfing & tennis</p>
+						<h4> Riviera Country Club </h4>
+						<small> If interested in golfing or tennis at the Riviera Club, please <a href="mailto:audrey.jieun@gmail.com">contact Audrey</a>. </small>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="row">
+		<div class="col-xs-12 col-md-7" >
+			<p class="text-muted">inside</p>
+			<p class="text-muted">> entertainment</p>
+				<h4> Disney Concert Hall </h4>
+				<h4> Hollywood Bowl </h4>
+				<h4> The Groundlings </h4>
+
+			<p class="text-muted">> museums</p>
+				<h4> <%= link_to 'Getty Center', 'http://www.getty.edu/'%> </h4>
+				<h4> Getty Villa </h4>
+				<h4> Griffith Park Observatory </h4>
+				<h4> The Broad </h4>
+		</div>
+	</div>
+
+</div>
+
+
+
+<%#
 <h3> Museums </h3>
 	<ul>
 		<li> Getty Center </li>
@@ -10,12 +128,10 @@
 		<li> Will Rogers / Temescal Canyon </li>
 		<li> Malibu </li>
 	</ul>
-<h3> Hiking </h3>
+<h3> Hiking & Running </h3>
 
-<h3> Tennis </h3>
-
-<h3> Golfing </h3>
-	Golfing is available at the Riviera - please contact Audrey audrey.jieun@gmail.com, if interested.
+<h3> Golfing & Tennis</h3>
+	If interested in golfing or tennis at the Riviera Club, please <a href="mailto:audrey.jieun@gmail.com">contact Audrey</a>.
 
 <h3> Entertainment </h3>
 	<ul>
@@ -25,12 +141,15 @@
 	</ul>
 <h3> Food Spots </h3>
 	<ul>
-		<li> "Roscoe's" Chicken and Waffles </li>
+		<li> Roscoe's Chicken and Waffles </li>
 		<li> Sushi Gen </li>
 		<li> Sugarfish </li>
-		<li> "Joan's" on 3rd </li>
+		<li> Joan's on 3rd </li>
 		<li> Brentwood Country Mart </li>
 		<li> Umami Burger </li>
 		<li> Lucques </li>
 		<li> AOC </li>
+		<li> Larchmont Wine & Cheese </li>
+		<li> Noshi Sushi </li>
 	</ul>
+%>

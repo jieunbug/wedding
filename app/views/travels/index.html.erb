@@ -1,30 +1,83 @@
+<%# PLACEHOLDER NUMBERS%> 
+<h3 class="hidden-sm hidden-xs bg-primary text-center"> Because of the holiday weekend, we recommend booking flights as soon as practical. <br>For reference, average flight prices from NYC airports are ~$300-$500 roundtrip.</h3>
+<h5 class="hidden-md hidden-lg bg-primary text-center"> Because of the holiday weekend, we recommend booking flights as soon as practical!</h5>
 
-<h3> Air </h3>
- 		Since it's a holiday weekend, we recommend booking flights ASAP.
-		We recommend flying into:
- 		> Los Angeles International Airport (LAX)
- 			> ~30 minutes from hotels
- 		> Burbank Airport (BUR), a.k.a. Bob Hope Airport
- 			> ~40 minutes from hotels
 
-		Other nearby  		
- 		> Long Beach Airport (LGB)
- 			> ~50 minutes from hotels
- 		> John Wayne Airport (SNA)
- 			> ~70 minutes from hotels
- 		> Ontario Airport (ONT)
- 			> ~75 minutes from hotels
 
-<h3> Airport Rideshare </h3>
- 		You can add your arrival info here, and check to see if folks with a similar itinerary want to share rides.
 
-<h3> Car Rentals [???] </h3>
- 		We recommend renting a car.
+<div class="col-xs-12 col-md-6">
+	<img class="img-rounded center-block" src="http://s20.postimg.org/vw3932a7t/air.png">	
+	<h3 class="text-center"> Air </h3>
+ 	<br>	
+	<strong> Closest Airports </strong>
+		<ul>
+	 		<li> LAX (Los Angeles International): 30 mins from hotels </li>
+	 		<li> BUR (Burbank): 40 mins from hotels </li>
+	 	</ul>
+	<strong> Other Southern CA Airports </strong>
+		<ul>
+	 		<li> LGB (Long Beach): 50 mins from hotels </li>
+	 		<li> SNA (John Wayne, Orange County): 70 mins from hotels </li>
+	 		<li> ONT (Ontario, Orange County): 75 mins from hotels </li>
+	 	</ul>
 
-<h3> Ground </h3>
-		[Directions to Riviera]
-		[The Riviera will ahve complimentary valet parking]
+	 <strong> Airport Transit </strong>
+	 	<ul> 
+	 	For those not looking to rent a car, Uber now picks up at LAX.
+	 	</ul>
 
-<h3> Shuttle </h3>
-		Shuttles will pick up from the hotels at 4:30pm (Angeleno) and 4:40pm (Luxe), respectively.
-		Shuttles will drop off at the hotels starting at 11:00pm and ending at 12:00am.
+	 <strong> Kayak Searches </strong>
+	 	<ul>
+	 		<li> <%= link_to 'From NYC', 'http://www.kayak.com/flights/NYC-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
+	 		<li> <%= link_to 'From BOS', 'http://www.kayak.com/flights/BOS-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
+			<li> <%= link_to 'From PWM', 'http://www.kayak.com/flights/PWM-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
+	
+	<%#PLACEHOLDER: Airport rideshare?%>
+
+</div>
+
+<div class="col-xs-12 col-md-6">
+	<img class="img-rounded center-block" src="http://s20.postimg.org/k8dsm9agp/ground.png">
+	<h3 class="text-center"> Ground </h3>
+	<br>
+	<strong> Valet parking at the Riviera will be complimentary. </strong>
+	<br><br>
+
+	<strong> From the 405 Freeway</strong>
+	<br>
+	Take the 405 San Diego freeway to Sunset Blvd. Exit and turn left, if going north on the 405 Freeway, or turn right if going south on the 405. You will be heading west on Sunset. Proceed 4 miles to Capri Drive.
+	At Capri, turn left at the traffic signal and proceed down the hill until you reach our front gate.
+	<br><br>
+
+	<strong> From Pacific Coast Highway (PCH)</strong>
+	<br>
+	Follow the Pacific Coast Highway until you reach Temescal Canyon. Take Temescal Canyon North until you reach Sunset Blvd. Turn right and follow Sunset Blvd. approximately four miles until you reach Capri Drive. Turn right at the traffic signal and proceed down the hill until you reach our front gate.
+	<br><br>
+
+	<strong> From the 10 Freeway</strong>
+	<br>
+	Take the #10 Santa Monica Freeway West to the 405 Freeway North. The exit sign reads "405 Sacramento". Take the 405 Freeway North to Sunset Blvd. Exit and turn left, going west on Sunset. Proceed approximately four miles to Capri Drive. At Capri, turn left at the traffic signal and proceed down the hill until you reach our front gate.
+	<br><br>
+</div>
+
+<%#	<strong> From the 405 Freeway</strong>
+	<ul>
+		<li> Take the 405 San Diego freeway to Sunset Blvd. Exit and turn left, if going north on the 405 Freeway, or turn right if going south on the 405.</li>
+		<li> You will be heading west on Sunset. Proceed 4 miles to Capri Drive.</li>
+		<li> At Capri, turn left at the traffic signal and proceed down the hill until you reach our front gate.</li>
+	</ul>
+
+	<strong>From Pacific Coast Highway (PCH)</strong>
+	<ul>
+		<li> Follow the Pacific Coast Highway until you reach Temescal Canyon. Take Temescal Canyon North until you reach Sunset Blvd. </li>
+		<li> Turn right and follow Sunset Blvd. approximately 4 miles until you reach Capri Drive. </li>
+		<li> Turn right at the traffic signal and proceed down the hill until you reach our front gate. </li>
+	</ul>
+
+	<strong>From the 10 Freeway</strong>
+	<ul>
+		<li> Take the #10 Santa Monica Freeway West to the 405 Freeway North. The exit sign reads "405 Sacramento". Take the 405 Freeway North to Sunset Blvd.</li>
+		<li> Exit and turn left, going west on Sunset. Proceed approximately 4 miles to Capri Drive. </li>
+		<li> At Capri, turn left at the traffic signal and proceed down the hill until you reach our front gate. </li>
+	</ul>
+%>

@@ -1,1 +1,175 @@
-<h1>Coming Soon!</h1>
+<h3 class="text-center">How thoughtful of you to visit this page!
+	<br><br>
+	More coming soon.
+</h3>
+
+<%# Pre-style the boxes where the maps will live %> 
+	<style>
+		#map {
+			width: 500px;
+			height: 400px;
+			background-color: #CCC;
+		}
+	</style>
+
+<%# Load the Google Maps API %> 
+	<script src="https://maps.googleapis.com/maps/api/js">
+	</script>
+
+<body>
+<%# Physically create the box where the map will live %> 
+	<div id="map">
+	</div>
+
+<%# polish people are smarter %>
+	<script type="text/javascript">
+        var locations = [
+			["Roscoe's Chicken and Waffles",34.047516,-118.346233,1],
+			["Chosun Galbee",34.052378,-118.310442,2],
+			["Sushi Gen",34.047238,-118.238668,3],
+			["Sugarfish",34.05351,-118.463093,4],
+			["Joan's on 3rd",34.072699,-118.371809,5],
+			["Lucques",34.082333,-118.375404,6],
+			["AOC",34.073397,-118.381919,7],
+			["Larchmont Wine & Cheese",34.075315,-118.32395,8],
+			["Noshi Sushi",34.076032,-118.305355,9]
+        ];
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: new google.maps.LatLng(34.047516, -118.346233),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map,
+            title: locations[i][0]
+          });
+
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+              infowindow.setContent(locations[i][0]);
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+        }
+	</script>
+
+
+<%# Try #2
+	<script>
+		function initialize() {
+			// Create a reference to the box where the map lives
+			var mapCanvas = document.getElementById('map');
+			// Set the 3 required customization options on the map
+			var mapOptions = {
+				center: new google.maps.LatLng(34.047516, -118.346233),
+				zoom: 6,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			// Set the bounds (???)
+			// var bounds = new google.maps.LatLngBounds();
+			// Create the new map object, which takes the two arguments of: (1) div/box reference and (2) customization options
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+			// Create multiple markers
+			var markers = [
+				["Roscoe's House of Chicken & Waffles",34.047516, -118.346233],
+				["Sugarfish",34.047516, -118.346238]
+			];
+			// Display multiple markers on the map
+			var infoWindow = new google.maps.InfoWindow();
+			var = marker, i;
+			// Loop through markers array and place each on the map
+			for(i=0; i < markers.length; i++) {
+				marker = new google.maps.Marker({
+					position: new google.maps.LatLng(markers[i][1], markers[i][2]),
+					map: map,
+				});		
+				//Allow each marker to have an info window
+				google.maps.event.addListener(marker, 'click', (function(marker, i) {
+					return function() {
+						infoWindow.setContent(markers[i][0]);
+						infoWindow.open(map,marker);
+					}
+				})(marker,i));
+			});
+
+		}
+			// Execute the JavaScript function with an event listener on the window object, so that it will call the INITIALIZE function upon page load
+			google.maps.event.addDomListener(window, 'load', initialize);
+
+	</script>
+%>
+
+<%#Try #1 
+    <script>
+      function initFoodMap() {
+
+      	var rivieraLatLng = {lat: 34.049794, lng: -118.501338};
+
+        var mapCanvas = document.getElementById('map');
+
+        var mapOptions = {
+          center: new google.maps.LatLng(34.049794, -118.501338),
+          zoom: 10,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var contentString = 'i am da riviera';
+
+        var infowindow = new google.maps.InfoWindow({
+    		content: contentString
+    	});
+        
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+      	var rivieraMarker = new google.maps.Marker({
+    		position: rivieraLatLng,
+    		map: map,
+    		title: 'Riviera Country Club'
+  		});
+		rivieraMarker.addListener('click', function() {
+			infowindow.open(map, rivieraMarker);
+		});
+
+      }
+
+      google.maps.event.addDomListener(window, 'load', initMap);
+
+    </script>
+
+
+    HOLDING CELL FOR BAD CODE
+
+
+
+
+
+
+				//Automatically center the map fitting all markers on the screen
+				map.fitBounds(bounds);
+			};
+
+
+
+			// Loop through markers array and place each on the map
+			// var position = new google.maps.LatLng(34.047516, -118.346233];
+			// bounds.extend(position);
+			var roscoes = new google.maps.LatLng(34.047516,-118.346233);
+			var marker = new google.maps.Marker({
+				position: roscoes,
+				map: map,
+				title: "Roscoe's House of Chicken & Waffles"
+
+
+
+%>
+
+
+</body>
