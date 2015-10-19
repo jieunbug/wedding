@@ -1,6 +1,18 @@
 <%# Pre-style the boxes where the maps will live %> 
 	<style>
-		#map {
+		#foodMap {
+			width: 500px;
+			height: 400px;
+			background-color: #CCC;
+		}
+
+		#outsideMap {
+			width: 500px;
+			height: 400px;
+			background-color: #CCC;
+		}
+
+		#insideMap {
 			width: 500px;
 			height: 400px;
 			background-color: #CCC;
@@ -12,26 +24,27 @@
 	</script>
 
 <%# Actual content starts here %>
+<br>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-12 col-md-5">
 			<p class="text-muted">food favorites<br>
 			<i>all 4+ stars on Yelp with 500+ reviews</i></p>
-				<h4> <%= link_to "Roscoe's Chicken and Waffles", "http://www.yelp.com/biz/roscoes-house-of-chicken-and-waffles-los-angeles" %> </h4>
-				<h4> <%= link_to 'Chosun Galbee', 'http://www.yelp.com/biz/chosun-galbee-los-angeles' %> </h4>
-				<h4> <%= link_to 'Sushi Gen', 'http://www.yelp.com/biz/sushi-gen-los-angeles' %> </h4>
-				<h4> <%= link_to 'Sugarfish Santa Monica', 'http://www.yelp.com/biz/sugarfish-by-sushi-nozawa-santa-monica' %> </h4>
-				<h4> <%= link_to "Joan's on 3rd", 'http://www.yelp.com/biz/joans-on-third-los-angeles' %> </h4>
-				<h4> <%= link_to 'Lucques', 'http://www.yelp.com/biz/lucques-west-hollywood-2' %> </h4>
-				<h4> <%= link_to 'AOC', 'http://www.yelp.com/biz/aoc-los-angeles' %> </h4>
-				<h4> <%= link_to 'Larchmont Wine & Cheese', 'http://www.yelp.com/biz/larchmont-village-wine-spirits-and-cheese-los-angeles' %> </h4>
-				<h4> <%= link_to 'Noshi Sushi', 'http://www.yelp.com/biz/noshi-sushi-los-angeles' %> </h4>
+				<h4> <%= link_to "Roscoe's Chicken and Waffles", "http://www.yelp.com/biz/roscoes-house-of-chicken-and-waffles-los-angeles", :target => "_blank" %> </h4>
+				<h4> <%= link_to "Gjelina", "http://www.yelp.com/biz/gjelina-venice-2", :target => "_blank" %> </h4>
+				<h4> <%= link_to "Joan's on 3rd", 'http://www.yelp.com/biz/joans-on-third-los-angeles', :target => "_blank" %> </h4>
+				<h4> <%= link_to 'Lucques', 'http://www.yelp.com/biz/lucques-west-hollywood-2', :target => "_blank" %> </h4>
+				<h4> <%= link_to 'AOC', 'http://www.yelp.com/biz/aoc-los-angeles', :target => "_blank" %> </h4>
+				<h4> <%= link_to 'Larchmont Wine & Cheese', 'http://www.yelp.com/biz/larchmont-village-wine-spirits-and-cheese-los-angeles', :target => "_blank" %> </h4>
+				<h4> <%= link_to 'Sushi Gen', 'http://www.yelp.com/biz/sushi-gen-los-angeles', :target => "_blank" %> </h4>
+				<h4> <%= link_to 'Sugarfish', 'http://www.yelp.com/biz/sugarfish-by-sushi-nozawa-los-angeles-9', :target => "_blank" %> </h4>
+				<h4> <%= link_to 'Noshi Sushi', 'http://www.yelp.com/biz/noshi-sushi-los-angeles', :target => "_blank" %> </h4>
+				<h4> <%= link_to 'Chosun Galbee', 'http://www.yelp.com/biz/chosun-galbee-los-angeles', :target => "_blank" %> </h4>
 		</div>
-
 
 		<div class="col-xs-12 col-md-7 hidden-sm hidden-xs">
 			<%# Physically create the box where the map will live %> 
-			<div id="map">
+			<div id="foodMap">
 			</div>
 
 			<%# polish people are smarter %>
@@ -45,12 +58,13 @@
 					["Lucques",34.082333,-118.375404,6],
 					["AOC",34.073397,-118.381919,7],
 					["Larchmont Wine & Cheese",34.075315,-118.32395,8],
-					["Noshi Sushi",34.076032,-118.305355,9]
+					["Noshi Sushi",34.076032,-118.305355,9],
+					["Gjelina",33.990507,-118.464928,10]
 		        ];
 
-		        var foodMap = new google.maps.Map(document.getElementById('map'), {
-		          zoom: 11,
-		          center: new google.maps.LatLng(34.047516, -118.346233),
+		        var foodMap = new google.maps.Map(document.getElementById('foodMap'), {
+		          zoom: 10,
+		          center: new google.maps.LatLng(34.070509,-118.404311),
 		          mapTypeId: google.maps.MapTypeId.ROADMAP
 		        });
 
@@ -74,46 +88,131 @@
 		        }
 			</script>
 		</div>
-
 	</div>
 	<hr>
 	<div class="row">
-		<div class="col-xs-12 col-md-7">
+		<div class="col-xs-12 col-md-5">
 			<p class="text-muted">outside</p>
 			<p class="text-muted">> hiking & running</p>
-						<h4> Franklin Canyon </h4>
-						<h4> Runyon Canyon </h4>
-						<h4> Canyon Canyon </h4>
+						<h4> <%= link_to 'Temescal Canyon', 'http://www.modernhiker.com/2013/02/01/hiking-temescal-canyon-to-skull-rock/', :target => "_blank" %> </h4>
+						<h4> <%= link_to 'Runyon Canyon', 'http://www.runyoncanyonhike.com/information/', :target => '_blank' %> </h4>
+						<h4> <%= link_to 'Griffith Park Trails & Observatory', 'http://www.modernhiker.com/area-maps/griffith-park/', :target => "_blank" %> </h4>
 			<p class="text-muted">> beaches</p>
-						<h4> Will Rogers / Temescal Canyon </h4>
-						<h4> Malibu </h4>
+						<h4> <%= link_to 'Will Rogers', 'http://www.yelp.com/biz/will-rogers-state-beach-pacific-palisades', :target => "_blank" %>  </h4>
+						<h4> <%= link_to 'Malibu Surfrider', 'http://beaches.lacounty.gov/wps/portal/dbh/home/detail/?current=true&urile=wcm:path:/dbh+content/dbh+site/home/home+detail/malibu+1', :target => "_blank" %> </h4>
 			<p class="text-muted">> golfing & tennis</p>
 						<h4> Riviera Country Club </h4>
 						<small> If interested in golfing or tennis at the Riviera Club, please <a href="mailto:audrey.jieun@gmail.com">contact Audrey</a>. </small>
 		</div>
+
+		<div class="col-xs-12 col-md-7 hidden-sm hidden-xs">
+			<%# Physically create the box where the map will live %> 
+			<div id="outsideMap">
+			</div>
+
+			<%# polish people are smarter %>
+			<script type="text/javascript">
+		        var outsideSpots = [
+					["Temescal Canyon",34.035619,-118.536451,1],
+					["Runyon Canyon Park",34.105386,-118.349157,2],
+					["Griffith Park Observatory",34.118375,-118.300354,3],
+					["Will Rogers Beach",34.035619,-118.536451,4],
+					["Venice Beach",33.9908,-118.4592,5],
+					["Riviera Country Club",34.049794,-118.501338,6]
+		        ];
+
+		        var outsideMap = new google.maps.Map(document.getElementById('outsideMap'), {
+		          zoom: 10,
+		          center: new google.maps.LatLng(34.070509,-118.404311),
+		          mapTypeId: google.maps.MapTypeId.ROADMAP
+		        });
+
+		        var infowindow = new google.maps.InfoWindow();
+
+		        var marker, i;
+
+		        for (i = 0; i < outsideSpots.length; i++) {
+		          marker = new google.maps.Marker({
+		            position: new google.maps.LatLng(outsideSpots[i][1], outsideSpots[i][2]),
+		            map: outsideMap,
+		            title: outsideSpots[i][0]
+		          });
+
+		          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+		            return function() {
+		              infowindow.setContent(outsideSpots[i][0]);
+		              infowindow.open(outsideMap, marker);
+		            }
+		          })(marker, i));
+		        }
+			</script>
+		</div>
 	</div>
 
 	<hr>
 
 	<div class="row">
-		<div class="col-xs-12 col-md-7" >
+		<div class="col-xs-12 col-md-5" >
 			<p class="text-muted">inside</p>
 			<p class="text-muted">> entertainment</p>
-				<h4> Disney Concert Hall </h4>
-				<h4> Hollywood Bowl </h4>
-				<h4> The Groundlings </h4>
+				<h4> <%= link_to "Disney Concert Hall", "http://www.musiccenter.org/#", :target => "_blank" %> </h4>
+				<h4> <%= link_to "Hollywood Bowl", "http://www.hollywoodbowl.com/", :target => "_blank" %> </h4>
+				<h4> <%= link_to "The Groundlings", "http://www.groundlings.com/", :target => "_blank" %> </h4>
 
 			<p class="text-muted">> museums</p>
-				<h4> <%= link_to 'Getty Center', 'http://www.getty.edu/'%> </h4>
-				<h4> Getty Villa </h4>
-				<h4> Griffith Park Observatory </h4>
-				<h4> The Broad </h4>
+				<h4> <%= link_to 'Getty Center', 'http://www.getty.edu/visit/center/plan/', :target => "_blank" %> </h4>
+				<h4> <%= link_to 'Getty Villa', 'http://www.getty.edu/visit/villa/plan/', :target => "_blank" %> </h4>
+				<h4> <%= link_to 'The Broad', 'http://www.thebroad.org/visit', :target => "_blank" %> </h4>
+		</div>
+
+		<div class="col-xs-12 col-md-7 hidden-sm hidden-xs">
+			<%# Physically create the box where the map will live %> 
+			<div id="insideMap">
+			</div>
+
+			<%# polish people are smarter %>
+			<script type="text/javascript">
+		        var insideSpots = [
+					["Getty Center",34.079001,-118.475119,1],
+					["Getty Villa",34.045555,-118.564956,2],
+					["Disney Concert Hall",34.055436,-118.24994,3],
+					["Hollywood Bowl",34.1128,-118.3389,4],
+					["Groundlings Theatre",34.083818,-118.348988,5],
+					["The Broad Museum",34.054471,-118.250558,6]
+		        ];
+
+		        var insideMap = new google.maps.Map(document.getElementById('insideMap'), {
+		          zoom: 10,
+		          center: new google.maps.LatLng(34.070509,-118.404311),
+		          mapTypeId: google.maps.MapTypeId.ROADMAP
+		        });
+
+		        var infowindow = new google.maps.InfoWindow();
+
+		        var marker, i;
+
+		        for (i = 0; i < insideSpots.length; i++) {
+		          marker = new google.maps.Marker({
+		            position: new google.maps.LatLng(insideSpots[i][1], insideSpots[i][2]),
+		            map: insideMap,
+		            title: insideSpots[i][0]
+		          });
+
+		          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+		            return function() {
+		              infowindow.setContent(insideSpots[i][0]);
+		              infowindow.open(insideMap, marker);
+		            }
+		          })(marker, i));
+		        }
+			</script>
 		</div>
 	</div>
 
+
 </div>
 
-
+<br>
 
 <%#
 <h3> Museums </h3>

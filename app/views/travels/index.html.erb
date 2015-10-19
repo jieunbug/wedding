@@ -1,8 +1,19 @@
-<%# PLACEHOLDER NUMBERS%> 
-<h3 class="hidden-sm hidden-xs bg-primary text-center"> Because of the holiday weekend, we recommend booking flights as soon as practical. <br>For reference, average flight prices from NYC airports are ~$300-$500 roundtrip.</h3>
-<h5 class="hidden-md hidden-lg bg-primary text-center"> Because of the holiday weekend, we recommend booking flights as soon as practical!</h5>
+<style>
+	#helpful-hint {
+	  background: #2C89DA url("tick.png") 20px 50% no-repeat;
+	  border-radius: 5px;
+	  color: #fff;
+	  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	  font-size: 20px;
+	  padding: 15px 20px 15px 50px;
+	  text-align: center;
+	}
+</style>
 
+<br>
 
+<p id="helpful-hint">Because it's a holiday weekend, we recommend booking ASAP!</p>
+<%#<h5 class="hidden-md hidden-lg bg-primary text-center"> Because of the holiday weekend, we recommend booking flights as soon as practical!</h5>%>
 
 
 <div class="col-xs-12 col-md-6">
@@ -31,7 +42,8 @@
 	 		<li> <%= link_to 'From NYC', 'http://www.kayak.com/flights/NYC-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
 	 		<li> <%= link_to 'From BOS', 'http://www.kayak.com/flights/BOS-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
 			<li> <%= link_to 'From PWM', 'http://www.kayak.com/flights/PWM-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
-	
+			<li> <%= link_to 'From QSF', 'http://www.kayak.com/flights/SFO,nearby-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
+		</ul>
 	<%#PLACEHOLDER: Airport rideshare?%>
 
 </div>
@@ -46,19 +58,20 @@
 	<strong> From the 405 Freeway</strong>
 	<br>
 	Take the 405 San Diego freeway to Sunset Blvd. Exit and turn left, if going north on the 405 Freeway, or turn right if going south on the 405. You will be heading west on Sunset. Proceed 4 miles to Capri Drive.
-	At Capri, turn left at the traffic signal and proceed down the hill until you reach our front gate.
+	At Capri, turn left at the traffic signal and proceed down the hill until the Rivieria's front gate.
 	<br><br>
 
 	<strong> From Pacific Coast Highway (PCH)</strong>
 	<br>
-	Follow the Pacific Coast Highway until you reach Temescal Canyon. Take Temescal Canyon North until you reach Sunset Blvd. Turn right and follow Sunset Blvd. approximately four miles until you reach Capri Drive. Turn right at the traffic signal and proceed down the hill until you reach our front gate.
+	Follow the Pacific Coast Highway until you reach Temescal Canyon. Take Temescal Canyon North until you reach Sunset Blvd. Turn right and follow Sunset Blvd. approximately four miles until you reach Capri Drive. Turn right at the traffic signal and proceed down the hill until you reach the Riviera's front gate.
 	<br><br>
 
 	<strong> From the 10 Freeway</strong>
 	<br>
-	Take the #10 Santa Monica Freeway West to the 405 Freeway North. The exit sign reads "405 Sacramento". Take the 405 Freeway North to Sunset Blvd. Exit and turn left, going west on Sunset. Proceed approximately four miles to Capri Drive. At Capri, turn left at the traffic signal and proceed down the hill until you reach our front gate.
+	Take the 10 Santa Monica Freeway West to the 405 Freeway North. The exit sign reads "405 Sacramento". Take the 405 Freeway North to Sunset Blvd. Exit and turn left, going west on Sunset. Proceed approximately four miles to Capri Drive. At Capri, turn left at the traffic signal and proceed down the hill until you reach the Riviera's front gate.
 	<br><br>
 </div>
+<br>
 
 <%#	<strong> From the 405 Freeway</strong>
 	<ul>
