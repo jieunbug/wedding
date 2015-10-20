@@ -11,6 +11,17 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed);
 @import url(https://fonts.googleapis.com/css?family=Proxima+Nova);
 
+@font-face {
+  font-family: "proxima-nova";
+  src: font-url( asset-path("proxima-nova.eot") );
+  src: font-url( asset-path("proxima-nova.eot?#iefix") ) format("embedded-opentype"),
+       font-url( asset-path("proxima-nova.woff") ) format("woff"),
+       font-url( asset-path("proxima-nova.ttf") ) format("truetype"),
+       font-url( asset-path("proxima-nova.svg#fontcustom") ) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1, h2, h3, h4, h5, h6, body {
 	font-family: Proxima Nova
 }
