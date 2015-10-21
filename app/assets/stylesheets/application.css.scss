@@ -1,27 +1,6 @@
+@import url('//fonts.googleapis.com/css?family=Montserrat');
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-@import url('//fonts.googleapis.com/css?family=PT+Sans+Narrow');
-@import url('//fonts.googleapis.com/css?family=Poiret+One');
-@import url('//fonts.googleapis.com/css?family=Lato:400,300');
-@import url('//fonts.googleapis.com/css?family=Josefin+Sans');
-@import url('//fonts.googleapis.com/css?family=Alegreya+Sans');
-@import url('//fonts.googleapis.com/css?family=Dancing+Script');
-@import url('//fonts.googleapis.com/css?family=Tangerine');
-@import url('//fonts.googleapis.com/css?family=Ubuntu+Condensed');
-@import url('//fonts.googleapis.com/css?family=Proxima+Nova');
-@import url('//fonts.googleapis.com/css?family=Montserrat');
-
-@font-face {
-  font-family: "proxima-nova";
-  src: font-url( asset-path("proxima-nova.eot") );
-  src: font-url( asset-path("proxima-nova.eot?#iefix") ) format("embedded-opentype"),
-       font-url( asset-path("proxima-nova.woff") ) format("woff"),
-       font-url( asset-path("proxima-nova.ttf") ) format("truetype"),
-       font-url( asset-path("proxima-nova.svg#fontcustom") ) format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 
 h1, h2, h3, h4, h5, h6, body {
 	font-family: Montserrat
