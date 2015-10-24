@@ -24,9 +24,18 @@
 		color: #2F4F4F;
 	}
 
+	#mobile-menu-link {
+	
+	}
+
+	#mobile-logo {
+		float: none;
+	}
+
 	a {
 		color: inherit;
 	}
+
 
 	footer {
 		font-family: Lato;
@@ -38,81 +47,87 @@
 
 <body>
 
-	<div class="container-fluid">
-<%# NAVBAR %>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+<%# mega-container for the whole page begins 
+	<div class="container">
+%>
+	<%# navbar begins%>
+	<nav class="navbar">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+		<%# mobile menu link %>
+		<div class="text-center">
+			<a role="button" class="hidden-md hidden-lg" id="mobile-menu-link" data-toggle="collapse" data-target="#mobile-menu">
+				MENU
+			</a> 
+		</div>
 
+		<%# mobile menu %>
+		<div class="collapse hidden-md hidden-lg" id="mobile-menu">
+	    	<ul class="nav nav-stacked text-center">
+		        <li> <%= link_to 'Home', root_path %><span class="sr-only">(current)</span></a></li>
+		        <li role="separator" class="divider"></li>
+				<li> <%= link_to 'Schedule', schedules_path %></li> 
+		        <li role="separator" class="divider"></li>
+				<li> <%= link_to 'Travel', travels_path %></li> 
+		        <li role="separator" class="divider"></li>
+				<li> <%= link_to 'Lodging', lodgings_path %></li> 
+		        <li role="separator" class="divider"></li>
+				<li> <%= link_to 'Excursions', excursions_path %></li> 
+		       	<li role="separator" class="divider"></li>
+				<li> <%= link_to 'Registry', registries_path %></li>
+	    	</ul>
+		</div> 
 
+		<%# desktop menu %>
+		<div class="hidden-xs hidden-sm" id="desktop-menu">
+	    	<ul class="nav navbar-nav navbar-right">
+		        <li> <%= link_to 'Home', root_path %><span class="sr-only">(current)</span></a></li>
+		        <li role="separator" class="divider"></li>
+				<li> <%= link_to 'Schedule', schedules_path %></li> 
+		        <li role="separator" class="divider"></li>
+				<li> <%= link_to 'Travel', travels_path %></li> 
+		        <li role="separator" class="divider"></li>
+				<li> <%= link_to 'Lodging', lodgings_path %></li> 
+		        <li role="separator" class="divider"></li>
+				<li> <%= link_to 'Excursions', excursions_path %></li> 
+		       	<li role="separator" class="divider"></li>
+				<li> <%= link_to 'Registry', registries_path %></li>
+	    	</ul>
+		</div> 
 
+		<%# mobile logo %>
+		<div class="text-center hidden-md hidden-lg">
+		<h1 class="navbar-brand" href="/" id='mobile-logo'>
+			Jesse &amp; Audrey<br>
+			<small>09 &middot; 04 &middot; 2016</small>
+		</h1>
+		</div>
 
+		<%# desktop logo %>
+		<div class="text-center hidden-xs hidden-sm">
+		<a class="navbar-brand" href="/" id='desktop-logo'>
+			Jesse &amp; Audrey<br>
+			<small>09 &middot; 04 &middot; 2016</small>
+		</a>
+		</div>
 
-
-
+	<%# navbar ends%>
+	</nav>
 
 
 		<hr>
-<%# THIS IS WHERE PAGE-SPECIFIC CONTENT BEGINS %>
+<%# page-specific content begins %>
 			<%= yield %>
-<%# THIS IS WHERE PAGE-SPECIFIC CONTENT ENDS %>
+<%# page-specific content ends %>
 		<hr>
 
 		<footer>
 			<small>&lt;3  @jieunbug</small>
 		</footer>
 		<br>
+
+<%# mega-container for the whole page ends
 	</div>
+%>
 
 </body>
 
