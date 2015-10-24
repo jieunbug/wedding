@@ -1,106 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>A&J: 9.4.16</title>
+  <title>A&amp;J: 9.4.16</title>
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
 <style>
-h1, h2, h3, h4, h5, h6, body {
-	font-family: Lato
-}
+	h1, h2, h3, h4, h5, h6, body {
+		font-family: Lato
+	}
 
-.navbar-brand {
-	color: #2F4F4F;
-}
+	.navbar-brand {
+		color: #2F4F4F;
+		text-transform: uppercase;
+	}
 
-.navbar-right {
-	font-family: Lato;
-	color: #2F4F4F;
-}
+	.navbar-right {
+		font-family: Lato;
+		color: #2F4F4F;
+	}
 
-a {
-	color: inherit;
-}
+	a {
+		color: inherit;
+	}
 
-footer {
-	font-family: Lato;
-	text-align: right;
-	color: #8b8b83;
-}
+	footer {
+		font-family: Lato;
+		text-align: right;
+		color: #8b8b83;
+	}
 
 </style>
 
-<div class="container">
-	<nav class="navbar">
-	  <div class="container">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-nav" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span> 
-	      </button> 
-	      <a class="navbar-brand" href="/" id='logo'>Audrey & Jesse
-	      </a>
-	    </div>
+<body>
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="mobile-nav">
-	      <ul class="nav navbar-nav navbar-right">
-	        <li> <%= link_to 'Home', root_path %><span class="sr-only">(current)</span></a></li>
-            <li role="separator" class="divider"></li>
-			<li> <%= link_to 'Schedule', schedules_path %></li> 
-            <li role="separator" class="divider"></li>
-			<li> <%= link_to 'Travel', travels_path %></li> 
-            <li role="separator" class="divider"></li>
-			<li> <%= link_to 'Lodging', lodgings_path %></li> 
-            <li role="separator" class="divider"></li>
-			<li> <%= link_to 'Excursions', excursions_path %></li> 
-           	<li role="separator" class="divider"></li>
-			<li> <%= link_to 'Registry', registries_path %></li>
-	      </ul>
+	<div class="container">
+<%# NAVBAR %>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
 
-<%#	      <ul class="nav navbar-nav navbar-right hidden-md hidden-lg">
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
-	          <ul class="dropdown-menu">
-	            <li><a href="#">Home</a></li>
-	            <li role="separator" class="divider"></li>
-	            <li><a href="#">Schedule</a></li>
-	            <li role="separator" class="divider"></li>
-	            <li><a href="#">Travel</a></li>
-	            <li role="separator" class="divider"></li>
-	            <li><a href="#">Lodging</a></li>
-	            <li role="separator" class="divider"></li>
-	            <li><a href="#">Excursions</a></li>
-	           	<li role="separator" class="divider"></li>
-	            <li><a href="#">Registry</a></li>
-	          </ul>
-	        </li>
-	      </ul> %>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
-</div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-<hr>
-	<%= yield %>
 
-<hr>
+
+
+
+
+
+
+
+		<hr>
+<%# THIS IS WHERE PAGE-SPECIFIC CONTENT BEGINS %>
+			<%= yield %>
+<%# THIS IS WHERE PAGE-SPECIFIC CONTENT ENDS %>
+		<hr>
+
+		<footer>
+			<small>&lt;3  @jieunbug</small>
+		</footer>
+		<br>
+	</div>
 
 </body>
-
-<footer>
-<small>&lt;3  @jieunbug</small>
-</footer>
-<br>
-</div>
 
 </html>
