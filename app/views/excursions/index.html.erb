@@ -30,12 +30,13 @@
 		<div class="col-xs-12 col-md-5">
 			<p class="text-muted">food favorites<br>
 			<i>4+ stars on Yelp with 500+ reviews</i></p>
-				<h4> <%= link_to "Roscoe's Chicken and Waffles", "http://www.yelp.com/biz/roscoes-house-of-chicken-and-waffles-los-angeles", :target => "_blank" %> </h4>
 				<h4> <%= link_to "Gjelina", "http://www.yelp.com/biz/gjelina-venice-2", :target => "_blank" %> </h4>
-				<h4> <%= link_to "Joan's on 3rd", 'http://www.yelp.com/biz/joans-on-third-los-angeles', :target => "_blank" %> </h4>
 				<h4> <%= link_to 'Lucques', 'http://www.yelp.com/biz/lucques-west-hollywood-2', :target => "_blank" %> </h4>
 				<h4> <%= link_to 'AOC', 'http://www.yelp.com/biz/aoc-los-angeles', :target => "_blank" %> </h4>
+				<h4> <%= link_to "Joan's on 3rd", 'http://www.yelp.com/biz/joans-on-third-los-angeles', :target => "_blank" %> </h4>
 				<h4> <%= link_to 'Larchmont Wine & Cheese', 'http://www.yelp.com/biz/larchmont-village-wine-spirits-and-cheese-los-angeles', :target => "_blank" %> </h4>
+				<h4> <%= link_to 'Malibu Farm', 'http://www.yelp.com/biz/malibu-farm-malibu-3', :target => "_blank" %> </h4>
+				<h4> <%= link_to "Roscoe's Chicken and Waffles", "http://www.yelp.com/biz/roscoes-house-of-chicken-and-waffles-los-angeles", :target => "_blank" %> </h4>
 				<h4> <%= link_to 'Sushi Gen', 'http://www.yelp.com/biz/sushi-gen-los-angeles', :target => "_blank" %> </h4>
 				<h4> <%= link_to 'Sugarfish', 'http://www.yelp.com/biz/sugarfish-by-sushi-nozawa-los-angeles-9', :target => "_blank" %> </h4>
 				<h4> <%= link_to 'Noshi Sushi', 'http://www.yelp.com/biz/noshi-sushi-los-angeles', :target => "_blank" %> </h4>
@@ -59,7 +60,8 @@
 					["AOC",34.073397,-118.381919,7],
 					["Larchmont Wine & Cheese",34.075315,-118.32395,8],
 					["Noshi Sushi",34.076032,-118.305355,9],
-					["Gjelina",33.990507,-118.464928,10]
+					["Gjelina",33.990507,-118.464928,10],
+					["Malibu Farm",34.037528,-118.675892,11]
 		        ];
 
 		        var foodMap = new google.maps.Map(document.getElementById('foodMap'), {
@@ -118,9 +120,10 @@
 					["Temescal Canyon",34.035619,-118.536451,1],
 					["Runyon Canyon Park",34.105386,-118.349157,2],
 					["Griffith Park Observatory",34.118375,-118.300354,3],
-					["Will Rogers Beach",34.035619,-118.536451,4],
-					["Venice Beach",33.9908,-118.4592,5],
-					["Riviera Country Club",34.049794,-118.501338,6]
+					["Will Rogers & Temescal Canyon",34.035619,-118.536451,4],
+					["Malibu Surfrider",34.0374765,-118.6767709,5],
+					["Venice Beach",33.9908,-118.4592,6],
+					["Riviera Country Club",34.049794,-118.501338,7]
 		        ];
 
 		        var outsideMap = new google.maps.Map(document.getElementById('outsideMap'), {
