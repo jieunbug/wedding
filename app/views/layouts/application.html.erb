@@ -9,7 +9,13 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-</head>
+
+<%# adding favicon according to: http://www.w3.org/2005/10/howto-favicon %>
+  <head profile="http://www.w3.org/2005/10/profile">
+	<link rel="icon" 
+      type="image/png" 
+      href="http://s28.postimg.org/tvwxuwd5l/favicon.png">
+ </head>
 
 <style>
 	h1, h2, h3, h4, h5, h6, body {
