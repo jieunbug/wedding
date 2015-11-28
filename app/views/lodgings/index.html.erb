@@ -21,6 +21,10 @@
 		max-height: 150px;
 	}
 
+	.panel-heading {
+		cursor: pointer;
+	}
+
 </style>
 
 <br>
@@ -97,11 +101,9 @@ For the best bookings, we recommend <b>reserving ASAP</b>.
 <h3> Other Hotel Options </h3>
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
+  	<div class="panel-heading" role="tab" id="headingOne" data-target="#collapseOne" data-toggle="collapse" data-parent="#accordion">
       <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Hilton HHonors
-        </a>
       </h4>
     </div>
     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
@@ -127,11 +129,9 @@ For the best bookings, we recommend <b>reserving ASAP</b>.
   </div>
 
   <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
+  	<div class="panel-heading" role="tab" id="headingTwo" data-target="#collapseTwo" data-toggle="collapse" data-parent="#accordion">
       <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           Starwood Preferred Guest
-        </a>
       </h4>
     </div>
     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
@@ -156,11 +156,9 @@ For the best bookings, we recommend <b>reserving ASAP</b>.
     </div>
   </div>
   <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+  	<div class="panel-heading" role="tab" id="headingThree" data-target="#collapseThree" data-toggle="collapse" data-parent="#accordion">
+  	  <h4 class="panel-title">
           Marriott Rewards
-        </a>
       </h4>
     </div>
     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
@@ -183,11 +181,9 @@ For the best bookings, we recommend <b>reserving ASAP</b>.
     </div>
   </div>
   <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingFour">
+  	<div class="panel-heading" role="tab" id="headingFour" data-target="#collapseFour" data-toggle="collapse" data-parent="#accordion">
       <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
           Boutique Luxury
-        </a>
       </h4>
     </div>
     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
