@@ -60606,3 +60606,42 @@ Started GET "/registries" for ::1 at 2015-11-28 19:56:12 -0800
 Processing by RegistriesController#index as HTML
   Rendered registries/index.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 60ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-28 23:03:11 -0800
+Processing by GreetingsController#index as HTML
+  Rendered greetings/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 785ms (Views: 784.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-28 23:03:12 -0800
+Processing by GreetingsController#index as HTML
+  Rendered greetings/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 41ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/excursions" for ::1 at 2015-11-28 23:03:16 -0800
+Processing by ExcursionsController#index as HTML
+  Rendered excursions/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 49ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/excursions" for ::1 at 2015-11-28 23:04:12 -0800
+Processing by ExcursionsController#index as HTML
+  Rendered excursions/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 107ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-efbf889e609285a0c6f633e22dfff40a2a9dee0b10d028bf252d3fcf045a39a5.css?body=1" for ::1 at 2015-11-28 23:04:12 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-28 23:04:12 -0800
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for ::1 at 2015-11-28 23:04:12 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-28 23:04:12 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-28 23:04:12 -0800
