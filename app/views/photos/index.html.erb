@@ -1,0 +1,248 @@
+<!--
+TO-DO
+- try and center the columns on xs-view (esp landscape view); best way to do this is to get the image to fit into the container, since those are centered
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- import jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script>
+
+<!-- jQuery Selector -->
+
+
+<style>
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/*
+.grid-sizer,
+.grid-item {
+  width: 33%;
+}
+*/
+
+.grid-item {
+  float: left;
+  background: #FFF;
+  padding: 0 !important;
+  margin: 0 !important; /*
+  margin-bottom: 10px;
+/*
+/* use this when working, to see the container borders
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+*/
+}
+
+.grid-item-width-2 {
+  width: 66%;
+}
+
+.grid-item-content {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+  <!-- add extra container element for Masonry -->
+  <div class="grid">
+    <!-- add sizing element for columnWidth -->
+    <div class="grid-sizer">
+    </div>
+    <!-- items use Bootstrap .col- classes -->
+      <!-- wrap item content in its own element -->
+    <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/qxjfnca4d/1_First_Night.jpg" alt="First-Night">
+      </div>
+    </div>
+
+    <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/mhrd7820t/Lewis_Wedding.jpg" alt="Lewis-Wedding">
+      </div>
+    </div>
+
+    <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/w375iap19/Malta_4.jpg" alt="Malta-4-320">
+      </div>
+    </div>
+
+    <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+      <div class="grid-item-content">
+          <img src="http://s20.postimg.org/aw80811rx/New_Paltz.jpg" alt="New-Paltz-320">
+      </div>
+    </div>
+
+    <div class="grid-item hidden-xs hidden-sm col-md-8">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/sawtu1oal/1_Spain_1.jpg" alt="Spain-1">
+      </div>
+    </div>
+
+    <div class="grid-item hidden-md hidden-lg col-xs-12 col-sm-6">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/jooyvpmwt/Spain_1.jpg" alt="Spain-1-320">
+      </div>
+    </div>
+
+    <div class="grid-item hidden-xs hidden-sm col-md-4">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/4nr9s6tkt/BKP_0154_1.jpg" alt="BKP-154">
+      </div>
+    </div>
+
+    <div class="grid-item hidden-xs hidden-sm col-md-8">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/b0p94d73x/Kaplans.jpg" alt="Kaplans-at-Rachels">
+      </div>
+    </div>
+
+    <div class="grid-item hidden-md hidden-lg col-xs-12 col-sm-6">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/g0mpcbcql/Kaplans.jpg" alt="Kaplans-at-Rachels-320">
+      </div>
+    </div>
+
+     <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/v8p7a06kd/Mexico_2.jpg" alt="Mexico-2-320">
+      </div>
+    </div>
+
+     <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/dh8zht1rx/Malta_3.jpg" alt="Malta-3-320">
+      </div>
+    </div>
+
+    <div class="grid-item hidden-xs hidden-sm col-md-8">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/40wygem2l/Menand_Wedding.jpg" alt="Menand-Wedding">
+      </div>
+    </div>
+
+    <div class="grid-item hidden-md hidden-lg col-xs-12 col-sm-6">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/wz88bho3h/Menand_Wedding.jpg" alt="Menand-Wedding-320">
+      </div>
+    </div>
+
+    <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/zd904uczh/BKP_0042_1.jpg" alt="BKP-042">
+      </div>
+    </div>
+
+    <div class="grid-item hidden-md hidden-lg col-xs-12 col-sm-6">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/4nr9s6tkt/BKP_0154_1.jpg" alt="BKP-154">
+      </div>
+    </div>
+
+    <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/em7n0xdml/YLS_Grad.jpg" alt="YLS-Grad-320">
+      </div>
+    </div>
+
+    <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/7r68k5tml/IMG_2477.jpg" alt="Risk-320">
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/7r68k5tml/IMG_2477.jpg" alt="Risk-320">
+      </div>
+    </div>
+
+
+<script>
+$(document).ready(function(){
+  $('.grid').imagesLoaded( function() {
+    $('.grid').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true,
+      resize: true,
+      isFitWidth: true
+    });
+  });
+});
+</script>
+
+
+
+<!--
+
+
+
+
+
+/////////////////
+    <div class="grid-item col-xs-6 col-sm-4 col-md-6">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/3pk3hdv0d/1_Malta_2.jpg" alt="Malta-2">
+      </div>
+    </div>
+
+
+    <div class="grid-item col-xs-6 col-sm-4 col-md-6">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/mpjlhh2d9/1_Mexico_1.jpg" alt="Mexico-1">
+      </div>
+    </div>
+
+    <div class="grid-item col-xs-6 col-sm-4 col-md-4">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/a2vefevr1/Schwartz_Wedding.jpg" alt="Schwartz-Wedding-320">
+      </div>
+    </div>
+
+     <div class="grid-item col-xs-6 col-sm-4 col-md-8">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/l44bpns59/1_Holidays.jpg" alt="Holidays">
+      </div>
+    </div>
+
+
+   ///////
+
+    <div class="grid-item col-xs-6 col-sm-4 col-md-6">
+      <div class="grid-item-content">
+        <img src="http://s20.postimg.org/6zz9ps665/1_Risk.jpg" alt="Risk">
+      </div>
+    </div>
+
+
+
+
+
+
+-->
+
+
+  </div>
+</div>
+
+</body>
+</html>
