@@ -1,6 +1,7 @@
 <!--
 TO-DO
 - try and center the columns on xs-view (esp landscape view); best way to do this is to get the image to fit into the container, since those are centered
+- figure out how to exclude the mobile version from swipebox on desktop and vice versa
 -->
 
 <!DOCTYPE html>
@@ -10,8 +11,8 @@ TO-DO
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script>
 
-<!-- jQuery Selector -->
-
+<!-- import Swipebox CSS -->
+<link rel="stylesheet" href="assets/swipebox.min.css">
 
 <style>
 /* clearfix */
@@ -32,7 +33,7 @@ TO-DO
   float: left;
   background: #FFF;
   padding: 0 !important;
-  margin: 0 !important; /*
+  margin: 0;
   margin-bottom: 10px;
 /*
 /* use this when working, to see the container borders
@@ -42,8 +43,8 @@ TO-DO
 */
 }
 
-.grid-item-width-2 {
-  width: 66%;
+.vertical-buffer {
+  margin-bottom: 20px;
 }
 
 .grid-item-content {
@@ -51,6 +52,9 @@ TO-DO
   max-height: 100%;
 }
 
+.need-more-height {
+  margin-top: 25px;
+}
 
 
 </style>
@@ -69,73 +73,93 @@ TO-DO
       <!-- wrap item content in its own element -->
     <div class="grid-item col-xs-12 col-sm-6 col-md-4">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/qxjfnca4d/1_First_Night.jpg" alt="First-Night">
+        <a href="http://s20.postimg.org/qxjfnca4d/1_First_Night.jpg" class="swipebox" title="First Night - Brooklyn, NY (June 2013)">
+          <img src="http://s20.postimg.org/qxjfnca4d/1_First_Night.jpg" alt="First-Night">
+        </a>
+      </div>
+    </div>
+
+   <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+      <div class="grid-item-content">
+        <a href="http://s20.postimg.org/mhrd7820t/Lewis_Wedding.jpg" class="swipebox" title="Steph & Jason's Wedding - Boston, MA (Aug 2014)">
+          <img src="http://s20.postimg.org/mhrd7820t/Lewis_Wedding.jpg" alt="Lewis-Wedding">
+        </a>
       </div>
     </div>
 
     <div class="grid-item col-xs-12 col-sm-6 col-md-4">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/mhrd7820t/Lewis_Wedding.jpg" alt="Lewis-Wedding">
+        <a href="http://s20.postimg.org/va8buwn5p/Malta_4.jpg" class="swipebox" title="Proposal Night - Mdina, Malta (July 2015)">
+          <img src="http://s20.postimg.org/w375iap19/Malta_4.jpg" alt="Malta-4-640">
+        </a>
       </div>
     </div>
 
     <div class="grid-item col-xs-12 col-sm-6 col-md-4">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/w375iap19/Malta_4.jpg" alt="Malta-4-320">
+        <a href="http://s20.postimg.org/p5c83u5od/1_New_Paltz.jpg" class="swipebox" title="First Trip - New Paltz, NY (October 2013)">
+          <img src="http://s20.postimg.org/aw80811rx/New_Paltz.jpg" alt="New-Paltz-640">
+        </a>
       </div>
     </div>
 
-    <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+    <div class="grid-item vertical-buffer hidden-xs hidden-sm col-md-8">
       <div class="grid-item-content">
-          <img src="http://s20.postimg.org/aw80811rx/New_Paltz.jpg" alt="New-Paltz-320">
-      </div>
-    </div>
-
-    <div class="grid-item hidden-xs hidden-sm col-md-8">
-      <div class="grid-item-content">
-        <img src="http://s20.postimg.org/sawtu1oal/1_Spain_1.jpg" alt="Spain-1">
+        <a href="http://s20.postimg.org/sawtu1oal/1_Spain_1.jpg" class="swipebox" title="Paella Feast - Mallorca, Spain (July 2015)">
+          <img src="http://s20.postimg.org/sawtu1oal/1_Spain_1.jpg" alt="Spain-1">
+        </a>
       </div>
     </div>
 
     <div class="grid-item hidden-md hidden-lg col-xs-12 col-sm-6">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/jooyvpmwt/Spain_1.jpg" alt="Spain-1-320">
+          <img src="http://s20.postimg.org/jooyvpmwt/Spain_1.jpg" alt="Spain-1-320">
       </div>
     </div>
 
     <div class="grid-item hidden-xs hidden-sm col-md-4">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/4nr9s6tkt/BKP_0154_1.jpg" alt="BKP-154">
+        <a href="http://s20.postimg.org/4nr9s6tkt/BKP_0154_1.jpg" class="swipebox" title="Engagement Photos - Pasadena, CA (Jan 2016)">
+          <img src="http://s20.postimg.org/4nr9s6tkt/BKP_0154_1.jpg" alt="BKP-154">
+        </a>
       </div>
     </div>
 
-    <div class="grid-item hidden-xs hidden-sm col-md-8">
+    <div class="grid-item vertical-buffer hidden-xs hidden-sm col-md-8">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/b0p94d73x/Kaplans.jpg" alt="Kaplans-at-Rachels">
+        <a href="http://s20.postimg.org/b0p94d73x/Kaplans.jpg" class="swipebox" title="Rachel & Dan's Wedding - New Jersey (Mar 2015)">
+          <img src="http://s20.postimg.org/b0p94d73x/Kaplans.jpg" alt="Kaplans-at-Rachels">
+        </a>
       </div>
     </div>
 
     <div class="grid-item hidden-md hidden-lg col-xs-12 col-sm-6">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/g0mpcbcql/Kaplans.jpg" alt="Kaplans-at-Rachels-320">
+          <img src="http://s20.postimg.org/g0mpcbcql/Kaplans.jpg" alt="Kaplans-at-Rachels-320">
       </div>
     </div>
 
      <div class="grid-item col-xs-12 col-sm-6 col-md-4">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/v8p7a06kd/Mexico_2.jpg" alt="Mexico-2-320">
+        <a href="http://s20.postimg.org/ac6rakcot/1_Mexico_2.jpg" class="swipebox" title="Parasailing - Cancun, Mexico (Mar 2014)">
+          <img src="http://s20.postimg.org/v8p7a06kd/Mexico_2.jpg" alt="Mexico-2-320">
+        </a>
       </div>
     </div>
 
      <div class="grid-item col-xs-12 col-sm-6 col-md-4">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/dh8zht1rx/Malta_3.jpg" alt="Malta-3-320">
+        <a href="http://s20.postimg.org/pyzj8o6rh/Malta_3.jpg" class="swipebox" title="Proposal Night - Mdina, Malta (July 2015)">
+          <img src="http://s20.postimg.org/dh8zht1rx/Malta_3.jpg" alt="Malta-3-320">
+        </a>
       </div>
     </div>
 
     <div class="grid-item hidden-xs hidden-sm col-md-8">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/40wygem2l/Menand_Wedding.jpg" alt="Menand-Wedding">
+        <a href="http://s20.postimg.org/40wygem2l/Menand_Wedding.jpg" class="swipebox" title="Emily & Lev's Wedding - Tarrytown, NY (Oct 2015)">
+          <img src="http://s20.postimg.org/40wygem2l/Menand_Wedding.jpg" alt="Menand-Wedding">
+        </a>
       </div>
     </div>
 
@@ -147,7 +171,9 @@ TO-DO
 
     <div class="grid-item col-xs-12 col-sm-6 col-md-4">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/zd904uczh/BKP_0042_1.jpg" alt="BKP-042">
+        <a href="http://s20.postimg.org/zd904uczh/BKP_0042_1.jpg" class="swipebox" title="Engagement Photos - Pasadena, CA (Jan 2016)">
+          <img src="http://s20.postimg.org/zd904uczh/BKP_0042_1.jpg" alt="BKP-042">
+        </a>
       </div>
     </div>
 
@@ -159,19 +185,26 @@ TO-DO
 
     <div class="grid-item col-xs-12 col-sm-6 col-md-4">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/em7n0xdml/YLS_Grad.jpg" alt="YLS-Grad-320">
+        <a href="http://s20.postimg.org/gohb6nqd9/1_YLS_Grad.jpg" class="swipebox" title="YLS Graduation - New Haven, CT (May 2015)">
+          <img src="http://s20.postimg.org/em7n0xdml/YLS_Grad.jpg" alt="YLS-Grad-320">
+        </a>
       </div>
     </div>
 
     <div class="grid-item col-xs-12 col-sm-6 col-md-4">
       <div class="grid-item-content">
-        <img src="http://s20.postimg.org/7r68k5tml/IMG_2477.jpg" alt="Risk-320">
+        <a href="http://s20.postimg.org/ef2u6rd4t/IMG_2477.jpg" class="swipebox" title="Romantic Pastime - Everywhere (2014-Present)">
+          <img src="http://s20.postimg.org/7r68k5tml/IMG_2477.jpg" alt="Risk-320">
+        </a>
       </div>
     </div>
 
+
     <div class="grid-item">
-      <div class="grid-item-content">
-        <img src="http://s20.postimg.org/7r68k5tml/IMG_2477.jpg" alt="Risk-320">
+      <div class="grid-item-content need-more-height">
+        <a href="http://s20.postimg.org/6d1pykbwd/fantasy_football.png" class="swipebox" title="Calmly Enjoying Fantasy Football - The Ludlow (Oct 2014)">
+          <img src="http://s20.postimg.org/ozw2b2919/fantasy_football.png" alt="Ravens">
+        </a>
       </div>
     </div>
 
@@ -190,6 +223,18 @@ $(document).ready(function(){
 });
 </script>
 
+<script src="assets/jquery.swipebox.min.js"></script>
+
+<script>
+;( function( $ ) {
+  $( '.swipebox' ).swipebox({
+    hideBarsDelay : 0, // delay before hiding bars on desktop
+    removeBarsOnMobile: false,
+  }
+    );
+
+} )( jQuery );
+</script>
 
 
 <!--
