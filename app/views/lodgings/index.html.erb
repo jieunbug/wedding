@@ -25,6 +25,10 @@
 		cursor: pointer;
 	}
 
+	#link a {
+		color: #0645AD;
+	}
+
 </style>
 
 <br>
@@ -91,9 +95,9 @@ These two hotels are across the street from each other, and the wedding shuttle 
 <h3> Private Home Rentals </h3>
 Because they can be more comfortable and cost-effective than hotels, we love private rental sites like:
 	<ul>
-		<li> <%= link_to 'AirBnB', 'https://www.airbnb.com/', :target => "_blank" %> </li>
-		<li> <%= link_to 'VRBO', 'http://www.vrbo.com/', :target => "_blank" %> </li>
-		<li> <%= link_to 'HomeAway', 'http://www.homeaway.com/', :target => "_blank" %> </li>
+		<li id="link"> <%= link_to 'AirBnB', 'https://www.airbnb.com/', :target => "_blank" %> </li>
+		<li id="link"> <%= link_to 'VRBO', 'http://www.vrbo.com/', :target => "_blank" %> </li>
+		<li id="link"> <%= link_to 'HomeAway', 'http://www.homeaway.com/', :target => "_blank" %> </li>
 	</ul>
 For the best bookings, we recommend <b>reserving ASAP</b>.
 

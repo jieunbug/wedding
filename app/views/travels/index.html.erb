@@ -8,6 +8,11 @@
 	  padding: 15px 15px 15px 15px;
 	  text-align: center;
 	}
+
+	#link a {
+		color: #0645AD;
+	}
+
 </style>
 
 <br>
@@ -38,10 +43,10 @@
 
 	 <strong> Kayak Searches </strong>
 	 	<ul>
-	 		<li> <%= link_to 'From NYC', 'http://www.kayak.com/flights/NYC-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
-	 		<li> <%= link_to 'From BOS', 'http://www.kayak.com/flights/BOS-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
-			<li> <%= link_to 'From PWM', 'http://www.kayak.com/flights/PWM-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
-			<li> <%= link_to 'From QSF', 'http://www.kayak.com/flights/SFO,nearby-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
+	 		<li id="link"> <%= link_to 'From NYC', 'http://www.kayak.com/flights/NYC-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
+	 		<li id="link"> <%= link_to 'From BOS', 'http://www.kayak.com/flights/BOS-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
+			<li id="link"> <%= link_to 'From PWM', 'http://www.kayak.com/flights/PWM-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
+			<li id="link"> <%= link_to 'From QSF', 'http://www.kayak.com/flights/SFO,nearby-LAX,nearby/2016-09-02/2016-09-05', :target => "_blank" %> </li>
 		</ul>
 	<%#PLACEHOLDER: Airport rideshare?%>
 </div>
