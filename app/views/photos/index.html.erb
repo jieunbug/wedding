@@ -1,7 +1,10 @@
 <!--
 TO-DO
 - try and center the columns on xs-view (esp landscape view); best way to do this is to get the image to fit into the container, since those are centered
-- figure out how to exclude the mobile version from swipebox on desktop and vice versa
+
+xx - add loader icon
+xx - added carousel image
+xx - changed carousel order
 -->
 
 <!DOCTYPE html>
@@ -15,6 +18,7 @@ TO-DO
 <link rel="stylesheet" href="assets/swipebox.min.css">
 
 <style>
+
 /* clearfix */
 .grid:after {
   content: '';
@@ -30,16 +34,23 @@ TO-DO
 */
 
 .grid-item {
-  float: middle;
+  float: left;
   background: #FFF;
   padding: 0 !important;
-  margin: 0 !important;
-/*
-/* use this when working, to see the container borders
+  margin: 0;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+/* use this when working, to see the container borders 
   border: 2px solid #333;
   border-color: hsla(0, 0%, 0%, 0.5);
   border-radius: 5px;
 */
+
+}
+
+.no-margin-bottom {
+  margin-bottom: 0px;
 }
 
 .vertical-buffer {
@@ -51,7 +62,23 @@ TO-DO
   max-height: 100%;
 }
 
+/*
+.grid-item .grid-item-content {
+  width: inherit;
+  height: inherit;
+}
+*/
 
+
+  #helpful-hint {
+    background:   #F0FFF0 url("tick.png") 20px 50% no-repeat;
+    border-radius: 5px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    width: 1063px; 
+  }
 
 </style>
 
@@ -59,9 +86,13 @@ TO-DO
 
 <body>
 
+
 <div class="container-fluid">
   <!-- add extra container element for Masonry -->
   <div class="grid">
+    
+    <p class="hidden-xs hidden-sm col-md-12" id="helpful-hint">click photos for captions</p>
+
     <!-- add sizing element for columnWidth -->
     <div class="grid-sizer">
     </div>
@@ -83,7 +114,7 @@ TO-DO
       </div>
     </div>
 
-    <div class="grid-item col-xs-12 col-sm-6 col-md-4">
+    <div class="grid-item col-xs-12 col-sm-6 col-md-4 no-margin-bottom">
       <div class="grid-item-content">
         <a href="assets/1. Malta-4.JPG" class="swipebox" title="Proposal Night - Mdina, Malta (July 2015)">
           <img src="http://s20.postimg.org/w375iap19/Malta_4.jpg" alt="Malta-4-640">
@@ -195,7 +226,7 @@ TO-DO
       </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item col-xs-12 col-sm-6 col-md-4">
       <div class="grid-item-content">
         <a href="http://s20.postimg.org/6d1pykbwd/fantasy_football.png" class="swipebox" title="Calmly Enjoying Fantasy Football - The Ludlow (Oct 2014)">
           <img src="http://s20.postimg.org/ozw2b2919/fantasy_football.png" alt="Ravens">
